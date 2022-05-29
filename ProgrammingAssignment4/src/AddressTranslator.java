@@ -1,7 +1,9 @@
 // This implementation is for Lab07 in the Operating System courses in SeoulTech
 // The original version of this implementation came from UGA
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 
@@ -59,6 +61,8 @@ public class AddressTranslator {
                  * variable of count of page fault
                  */
                 int page_fault = 0;
+
+				BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 
 
