@@ -16,10 +16,11 @@ public class PhysicalMemory{
     /**
      * Constructor
      */
-    public PhysicalMemory(){
-        this.frames = new Frame[256];
+    public PhysicalMemory(int size){
+        this.frames = new Frame[size];
         this.currentFreeFrame = 0;
     }
+
 
 
     /**
