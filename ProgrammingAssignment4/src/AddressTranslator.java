@@ -73,12 +73,12 @@ public class AddressTranslator {
 			 	*/
 				double page_rate = 0.0;
 
-			Scanner scanner = new Scanner(System.in);
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 				System.out.println("which Algorithm do you want?");
 				System.out.println("1. FIFO\t\t\t2.LRU");
 				System.out.println("-------------------------------------------------");
-				int N = scanner.nextInt();
+				int N = Integer.parseInt(br.readLine());
 
 //				System.out.println("The physical memory size is 128");
 				int p_size = 128;
@@ -139,19 +139,15 @@ public class AddressTranslator {
                 								pt.table[i].frameNumber = -1;
 											}
 										}
-
-//                						pt.add(p_num, f_num);
-//                						tlb.put(p_num, f_num);
 									}
                 					else{
                 						f_num = pm.addFrame(f);
 									}
 									pt.add(p_num, f_num);
 									tlb.put(p_num, f_num);
-
-
 								}
 
+//                				LRU
                 				else if(N == 2){
                 					if(pm.currentFreeFrame == pm.frames.length){
 										int vp = lru.Victim(p_num,true);
